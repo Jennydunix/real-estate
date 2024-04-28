@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
-import userRouter from "./routes/user.route.js"
+import userRouter from "./routes/user.route.js";
+import authRouter from "./routes/auth.route.js";
 import dotenv from "dotenv";
 
 // initialize dotenv
@@ -25,3 +26,4 @@ app.listen(3000, () => {
 
 // Define routes
 app.use("/api/user", userRouter);
+app.use("/api/auth", authRouter);
